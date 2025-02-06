@@ -16,13 +16,17 @@ export default defineNuxtConfig({
         { src: '/waypoints/waypoints.min.js', body: true },
         { src: '/magnific-popup/magnific-popup.min.js', body: true },
         { src: '/magnific-popup/magnific-popup.js', body: true },
-        { src: '/js/script.js', body: true, defer: true}
+        { src: '/js/script.js', body: true, defer: true }
       ],
       link: [
-        { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico'},
+        { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ]
     }
+  },
+  target: 'static', // Ensures pages are generated statically
+  generate: {
+    fallback: true, // Required for dynamic routes
   },
   modules: [
     '@nuxt/content'
