@@ -28,6 +28,9 @@ export default defineNuxtConfig({
   generate: {
     fallback: true, // Required for dynamic routes
   },
+  nitro: {
+    preset: 'static'
+  },
   modules: [
     '@nuxt/content'
   ],
